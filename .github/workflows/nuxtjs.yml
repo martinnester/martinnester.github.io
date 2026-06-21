@@ -35,6 +35,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+      # 1. Install pnpm first
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9 # Specify your pnpm version or omit to use packageManager in package.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
