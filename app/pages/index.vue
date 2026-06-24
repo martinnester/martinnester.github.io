@@ -30,8 +30,12 @@ const getNotes = () =>
     <br />
     <p>Notes I'm taking:</p>
     <ul>
-        <li v-for="note in getNotes()">
-            <a :href="note.path">{{ note.name }}</a>
-        </li>
+        <template v-for="note in getNotes()">
+            <li v-if="note.name && typeof note.name === 'string'">
+                <a :href="note.path">{{
+                    note.name.replace("notes-", "").replaceAll("-", " ")
+                }}</a>
+            </li>
+        </template>
     </ul>
 </template>
