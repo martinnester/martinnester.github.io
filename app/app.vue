@@ -1,5 +1,7 @@
+<script setup lang="ts"></script>
 <template>
     <main>
+        <h1>Martin Nester - Software Engineer</h1>
         <a href="/">Go Home</a>
         <NuxtPage />
     </main>
